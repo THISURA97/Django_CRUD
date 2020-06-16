@@ -5,6 +5,8 @@
     <title>Index</title>  
     {% load static %}  
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">  
 </head>  
 <body>  
@@ -12,37 +14,37 @@
         {% csrf_token %}  
     <div class="container">  
 <br>  
-    <div class="form-group row">  
+    <div class="form-group ">  
     <label class="col-sm-1 col-form-label"></label>  
     <div class="col-sm-4">  
     <h3>Enter Details</h3>  
     </div>  
   </div>  
-    <div class="form-group row">  
+    <div class="form-group ">  
     <label class="col-sm-2 col-form-label">Employee Id:</label>  
-    <div class="col-sm-4">  
+    <div class="col-sm-4 ">  
       {{ form.eid }}  
     </div>  
   </div>  
-  <div class="form-group row">  
+  <div class="form-group ">  
     <label class="col-sm-2 col-form-label">Employee Name:</label>  
     <div class="col-sm-4">  
       {{ form.ename }}  
     </div>  
   </div>  
-    <div class="form-group row">  
+    <div class="form-group ">  
     <label class="col-sm-2 col-form-label">Employee Email:</label>  
     <div class="col-sm-4">  
       {{ form.eemail }}  
     </div>  
   </div>  
-    <div class="form-group row">  
+    <div class="form-group ">  
     <label class="col-sm-2 col-form-label">Employee Contact:</label>  
     <div class="col-sm-4">  
       {{ form.econtact }}  
     </div>  
   </div>  
-    <div class="form-group row">  
+    <div class="form-group ">  
     <label class="col-sm-1 col-form-label"></label>  
     <div class="col-sm-4">  
     <button type="submit" class="btn btn-primary">Submit</button>  
