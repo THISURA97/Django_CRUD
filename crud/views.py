@@ -1,8 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect  
 from crud.forms import EmployeeForm  
 from crud.models import Employee  
 
-# Create your views here.
+# Create your views here.  
 
 def emp(request):  
     if request.method == "POST":  
@@ -18,20 +18,18 @@ def emp(request):
     return render(request,'index.html',{'form':form})  
 def show(request):  
     employees = Employee.objects.all()  
-    return render(request,"show.html",{'employees':employees})  
+    return render(request,"show.html",{'employees':employees})     
 def edit(request, id):  
     employee = Employee.objects.get(id=id)  
     return render(request,'edit.html', {'employee':employee})  
 def update(request, id):  
     employee = Employee.objects.get(id=id)  
     form = EmployeeForm(request.POST, instance = employee)  
-
- if form.is_valid():  
+    if form.is_valid():  
         form.save()  
         return redirect("/show")  
     return render(request, 'edit.html', {'employee': employee})  
-
 def destroy(request, id):  
     employee = Employee.objects.get(id=id)  
     employee.delete()  
-    return redirect("/show")  
+    return redirect("/show")
