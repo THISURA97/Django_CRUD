@@ -1,1 +1,1 @@
-web: gunicorn newdj.wsgi 
+web: gunicorn crud.wsgi 
