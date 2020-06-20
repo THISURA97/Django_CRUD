@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = '!@x7haf)c2cvr+yw-m9jo^5!9f3+k$zx*_p8(kvu%q)3e@tnkp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False,
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,14 +79,7 @@ WSGI_APPLICATION = 'newdj.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.postgresql',  
-        'NAME': 'dc126jvmia5pmv',  
-        'USER':'kupiytbjhgqpyj',  
-        'PASSWORD':'506c092159b34113e5f13daec89a2657d7b4900723bff32b0f7407a4f745a2e0',  
-        'HOST':'ec2-52-72-65-76.compute-1.amazonaws.com',  
-        'PORT':'5432'  
-    }
+   'default': dj_database_url.config()
 }
 
 
