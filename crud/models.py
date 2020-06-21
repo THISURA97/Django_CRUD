@@ -7,8 +7,8 @@ class Employee(models.Model):
     ename = models.CharField(max_length=100)  
     eemail = models.EmailField()  
     econtact = models.CharField(max_length=15)
-    date = models.DateField('%m/%d/%Y')
-    created_at = models.DateTimeField('%m/%d/%Y %H:%M:%S')
-    updated_at = models.DateTimeField('%m/%d/%Y %H:%M:%S')  
+    date = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)  
     class Meta:  
         db_table = "employee"  
