@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect  
+from django.shortcuts import render, redirect
 from crud.forms import EmployeeForm  
 from crud.models import Employee  
 
@@ -37,3 +37,4 @@ def destroy(request, id):
     employee = Employee.objects.get(id=id)  
     employee.delete()  
     return redirect("/show")
+
