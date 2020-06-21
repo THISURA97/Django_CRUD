@@ -21,7 +21,8 @@
         <th>Employee ID</th>  
         <th>Employee Name</th>  
         <th>Employee Email</th>  
-        <th>Employee Contact</th>  
+        <th>Employee Contact</th> 
+        <th>Created At</th> 
         <th>Actions</th>  
     </tr>  
     </thead>  
@@ -32,6 +33,7 @@
         <td>{{ employee.ename }}</td>  
         <td>{{ employee.eemail }}</td>  
         <td>{{ employee.econtact }}</td>  
+        <td>{{ employee.created_at  |date:"d-m-Y H:i:s" }}</td>
         <td>  
             <a href="/edit/{{ employee.id }}" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
             <a href="/delete/{{ employee.id }}" class="btn btn-danger btn-sm">Delete</a>  
