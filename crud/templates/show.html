@@ -33,7 +33,7 @@
         <td>{{ employee.ename }}</td>  
         <td>{{ employee.eemail }}</td>  
         <td>{{ employee.econtact }}</td>  
-        <td>{{ employee.created_at  |date:"d-m-Y H:i:s" }}</td>
+        <td>{{ employee.created_at }}</td>
         <td>  
             <a href="/edit/{{ employee.id }}" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
             <a href="/delete/{{ employee.id }}" class="btn btn-danger btn-sm">Delete</a>  
