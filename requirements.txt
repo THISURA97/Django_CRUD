@@ -5,7 +5,7 @@ certifi==2023.7.22
 colorama==0.4.3
 distlib==0.3.0
 dj-database-url==0.5.0
-Django==3.1.14
+Django==3.2.24
 django-binary-database-files==1.0.12
 django-heroku==0.3.1
 filelock==3.0.12
